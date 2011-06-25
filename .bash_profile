@@ -27,7 +27,12 @@ fi
 
 
 #### Command prompt ####
-alias ggbfp="git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git branch: \1)/'" # get git branch for prompt
+function ggbfp {
+	## get git branch for prompt
+	if [ "$HOME" != $(git rev-parse --show-toplevel) ]; then
+		git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git: \1)/'
+	fi
+}
 export PS1='\n\[\033[1;30m\][$(date +%T)] \[\033[0;32m\]\h:\[\033[1;32m\]\w \[\033[0;36m\]$(ggbfp) \[\033[1;31m\]\n$ \[\033[0m\]'
 #export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
 
