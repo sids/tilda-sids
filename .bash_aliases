@@ -18,13 +18,15 @@ alias ctags=`brew --prefix`/bin/ctags
 
 #### git shortcuts ####
 alias g=git
-alias gs='git status'
-alias gsh='git show'
+alias gb='git branch'
 alias gco='git commit'
+alias gch='git checkout'
 alias gd='git diff'
 alias gdt='git difftool'
 alias gm='git merge'
 alias gmt='git mergetool'
+alias gs='git status'
+alias gsh='git show'
 alias gst='git stash'
 alias gsts='git stash save'
 alias gstl='git stash list'

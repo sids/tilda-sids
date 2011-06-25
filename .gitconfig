@@ -22,3 +22,18 @@
 [mergetool "diffmerge"]
 	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
 	trustexitcode = false
+[alias]
+	b = branch
+	co = commit
+	ch = checkout
+	d = diff
+	dt = difftool
+	m = merge
+	mergetool = mergetool
+	s = status
+	sh = show
+	st = stash
+	sts = stash save
+	stl = stash list
+	sta = stash apply
+	stp = stash pop
