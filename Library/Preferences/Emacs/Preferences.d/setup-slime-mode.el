@@ -1,0 +1,25 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; slime
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(eval-after-load "slime"
+  '(progn
+     (setq slime-net-coding-system 'utf-8-unix)
+     (setq slime-check-version nil)
+     ;;(setq slime-words-of-encouragement t)
+     ;;(setq slime-use-autodoc-mode nil)
+     (slime-setup '(slime-repl
+		    slime-fancy
+		    slime-fuzzy
+		    slime-banner))
+     (setq slime-complete-symbol*-fancy t)
+     (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)))
+
+(require 'slime)
+;(add-to-list 'slime-lisp-implementations '(sbcl ("sbcl")))
+
+;; By default inputs and results have the same color
+;; Customize result color to differentiate them
+;; Look for `defface' in `slime-repl.el' if you want to further customize
+(custom-set-faces
+ '(slime-repl-result-face ((t (:foreground "LightGreen")))))
