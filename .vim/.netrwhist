@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/sids/Projects/history.grok.in/extensions/historyonsteroids/defaults'
+let g:netrw_dirhist_2='/home/sids/Projects/history.grok.in/extensions/historyonsteroids/defaults/preferences'
+let g:netrw_dirhist_3='/home/sids/.mozilla/firefox/zh9f1tdk.dev/extensions/firefox.addon@history.grok.in'
+let g:netrw_dirhist_4='/home/sids/.mozilla/firefox/zh9f1tdk.dev/extensions/firebug@software.joehewitt.com'
+let g:netrw_dirhist_5='/home/sids/Projects/web101/nutch/conf'
+let g:netrw_dirhist_6='/home/sids/Projects/web101/webapps/manage/app/models'
+let g:netrw_dirhist_7='/home/sids/Projects/nerchuko'
+let g:netrw_dirhist_8='/home/sids/src/clojure/src/clj/clojure/core'
+let g:netrw_dirhist_9='/users/sids/tmp'

@@ -1,0 +1,17 @@
+[apply]
+	whitespace = nowarn
+[user]
+	name = Siddhartha Reddy
+	email = sids@grok.in
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = auto
+[merge]
+	tool = opendiff
+	summary = true
+[core]
+	excludesfile = /Users/sids/.gitignore
+	whitespace = cr-at-eol
