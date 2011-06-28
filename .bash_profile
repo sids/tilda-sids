@@ -29,7 +29,7 @@ fi
 #### Command prompt ####
 function ggbfp {
 	## get git branch for prompt
-	if [ "$HOME" != $(git rev-parse --show-toplevel) ]; then
+	if [ "$HOME" != "$(git rev-parse --show-toplevel 2>/dev/null)" ]; then
 		git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git: \1)/'
 	fi
 }
