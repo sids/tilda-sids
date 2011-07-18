@@ -1,6 +1,8 @@
 (byte-recompile-directory "~/Library/Preferences/Emacs/Preferences.d")
 (byte-recompile-directory "~/Library/Preferences/Emacs/vendor")
 
+(set-language-environment "UTF-8")
+
 (load-library "basic-setup")
 (load-library "my-functions")
 
@@ -39,3 +41,6 @@
   (eval-after-load "tramp-compat"
     '(add-to-list 'byte-compile-not-obsolete-vars
                   'font-lock-beginning-of-syntax-function)))
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
