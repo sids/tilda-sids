@@ -5,15 +5,11 @@
 (eval-after-load "slime"
   '(progn
      (setq slime-net-coding-system 'utf-8-unix)
-     (setq slime-check-version nil)
-     ;;(setq slime-words-of-encouragement t)
-     ;;(setq slime-use-autodoc-mode nil)
+     (setq slime-protocol-version 'ignore)
      (slime-setup '(slime-repl
 		    slime-fancy
 		    slime-fuzzy
-		    slime-banner))
-     (setq slime-complete-symbol*-fancy t)
-     (setq slime-complete-symbol-function 'slime-fuzzy-complete-symbol)))
+		    slime-banner))))
 
 (require 'slime)
 ;(add-to-list 'slime-lisp-implementations '(sbcl ("sbcl")))
