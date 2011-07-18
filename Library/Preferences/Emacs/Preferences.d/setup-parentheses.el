@@ -2,6 +2,7 @@
 (require 'parenface)
 
 (require 'autopair)
+(set-default 'autopair-dont-activate #'(lambda () (eq major-mode 'sldb-mode)))
 (autopair-global-mode)
 
 (require 'highlight-parentheses)
