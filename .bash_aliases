@@ -28,12 +28,10 @@ alias gmt='git mergetool'
 alias gs='git status'
 alias gsh='git show'
 alias gst='git stash'
-alias gsts='git stash save'
-alias gstl='git stash list'
-alias gsta='git stash apply'
-alias gstp='git stash pop'
 
 
 #### Flipkart specific ####
-alias fk-screen='ssh siddhartha@w3.eng.flipkart.com -t screen -S nm -D -R'
+alias fk-screen='stt fk-sreen; ssh siddhartha@w3.eng.flipkart.com -t screen -S nm -D -R'
+alias fk-scratch-my='stt fk-scratch-my; ssh siddhartha@w3-indexer4.nm.flipkart.com -t screen -D -R'
 alias fk-projects='cd $HOME/Flipkart/projects'
+alias fk-tail-agent-log='stt fk-tail-agent-logs; tail -f /var/log/flipkart/w3/agent/agent.log'
