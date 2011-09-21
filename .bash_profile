@@ -36,6 +36,11 @@ function ggbfp {
 export PS1='\[\033[1;30m\][$(date +%T)] \n\[\033[0;32m\]\h:\[\033[1;32m\]\w \[\033[0;36m\]$(ggbfp) \[\033[1;31m\]\n$ \[\033[0m\]'
 #export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
 
+function stt() {
+	echo -en "\033]2;$1\007"
+	#PS1=$(echo $PS1 |sed 's/^.*\\007//')
+	#export PS1="\033]0;$1\007$PS1"
+}
 
 #### Set title of terminal to last command; for ssh command, set it to hostname ####
 #trap 'printf "\033]0;  `history 1 |perl -p -e"s/^ssh //"  |cut -b8-`  \007"' DEBUG
