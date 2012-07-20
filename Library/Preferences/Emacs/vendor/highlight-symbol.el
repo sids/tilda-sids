@@ -190,8 +190,7 @@ element in of `highlight-symbol-faces'."
             (incf highlight-symbol-color-index)
           (setq highlight-symbol-color-index 1
                 color (car highlight-symbol-colors)))
-        (setq color `((background-color . ,color)
-                      (foreground-color . "black")))
+        (setq color `((background-color . ,color)))
         ;; highlight
         (with-no-warnings
           (if (< emacs-major-version 22)

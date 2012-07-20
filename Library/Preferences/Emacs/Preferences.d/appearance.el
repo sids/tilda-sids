@@ -2,12 +2,6 @@
 ;; Appearance
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(tabbar-mode 0)
-(scroll-bar-mode 0)
-(tool-bar-mode 0)
-
-(load-library "my-color-theme")
-(my-color-theme)
 
 ;(load-library "color-theme-infinity")
 ;(color-theme-infinity)
@@ -28,7 +22,7 @@
 ;(set-cursor-color "orange")
 ;(set-face-background 'hl-line "#0a0a0c")
 ;;(set-face-background 'region "#141416")
-;(set-face-attribute 'mode-line nil
+					;(set-face-attribute 'mode-line nil
 ;		    :background "#0a0a0c"
 ;		    :foreground "#a0a0c0"
 ;		    :box '(:line-width 3 :color "#0a0a0c"))
@@ -41,14 +35,14 @@
 ;		    :foreground "#32CD32"
 ;		    :bold t
 ;		    :italic nil)
-;(set-face-background 'show-paren-match nil)
+					;(set-face-background 'show-paren-match nil)
 ;(set-face-foreground 'minibuffer-prompt "yellow")
 ;(set-face-foreground 'comint-highlight-prompt "yellow")
 ;(set-face-background 'highlight-symbol-face "#3a3a3c")
 ;(set-face-attribute 'mumamo-border-face-in nil
 ;				:foreground "SeaGreen"
 ;				:underline nil
-;				:italic nil
+					;				:italic nil
 ;				:bold nil)
 ;(set-face-attribute 'mumamo-border-face-out nil
 ;				:foreground "SeaGreen"

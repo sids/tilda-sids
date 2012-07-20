@@ -18,4 +18,4 @@
 ;; Customize result color to differentiate them
 ;; Look for `defface' in `slime-repl.el' if you want to further customize
 (custom-set-faces
- '(slime-repl-result-face ((t (:foreground "LightGreen")))))
+  '(slime-repl-result-face ((t (:foreground "LightGreen")))))

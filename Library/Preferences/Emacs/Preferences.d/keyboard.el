@@ -1,3 +1,6 @@
+;; KeyboardMacrosTricks:
+;; http://www.emacswiki.org/emacs/KeyboardMacrosTricks
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Keyboard shortcuts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -32,7 +35,7 @@
   "Go to the matching paren if on a paren; otherwise insert %."
   (interactive "p")
   (cond ((looking-at "\\s\(") (forward-list 1))
-	;((looking-back "\\s\(") (backward-char 1) (forward-list 1) (backward-char 1))
+					;((looking-back "\\s\(") (backward-char 1) (forward-list 1) (backward-char 1))
 	;((looking-at "\\s\)") (forward-char 1) (backward-list 1))
 	((looking-back "\\s\)") (forward-char 1) (backward-list 1))
 	(t (self-insert-command (or arg 1)))))
