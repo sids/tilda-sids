@@ -7,7 +7,7 @@
 
 ;; moving between buffers
 (global-set-key (kbd "C-`") 'next-buffer)
-(global-set-key (kbd "C-S-`") 'previous-buffer)
+(global-set-key (kbd "M-`") 'previous-buffer)
 
 ;; moving between split buffers
 (global-set-key (kbd "C-<tab>") 'other-window)
