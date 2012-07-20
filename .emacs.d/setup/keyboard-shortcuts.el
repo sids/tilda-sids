@@ -26,8 +26,7 @@
 
 (global-set-key (kbd "<f7>") 'switch-to-minibuffer-window)
 
-;; doesn't work anymore :(
-(global-set-key (kbd "A-y") 'kill-ring-save-line)
+(global-set-key (kbd "C-c y") 'copy-line)
 
 ;; vim command-mode like %
 (global-set-key "%" 'match-paren)

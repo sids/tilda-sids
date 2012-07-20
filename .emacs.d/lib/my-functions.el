@@ -29,12 +29,13 @@
   (interactive)
   (kill-buffer (current-buffer)))
 
-;; http://stackoverflow.com/questions/5727912/is-there-an-emacs-function-that-copies-a-whole-line-including-the-newline
-(defun kill-ring-save-line ()
-  "Save the line containing point to the kill ring."
-  (interactive)
+;; http://emacswiki.org/emacs/CopyingWholeLines
+(defun copy-line (arg)
+  "Copy lines (as many as prefix argument) in the kill ring"
+  (interactive "p")
   (kill-ring-save (line-beginning-position)
-                  (line-beginning-position 2)))
+                  (line-beginning-position (+ 1 arg)))
+  (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
 
 ;; grabbed from
 ;; http://blog.tuxicity.se/elisp/emacs/2010/03/11/duplicate-current-line-or-region-in-emacs.html
