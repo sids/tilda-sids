@@ -33,7 +33,4 @@ alias gst='git stash'
 
 
 #### Flipkart specific ####
-alias fk-screen='stt fk-sreen; ssh siddhartha@w3.eng.flipkart.com -t screen -S nm -D -R'
-alias fk-scratch-my='stt fk-scratch-my; ssh siddhartha@w3-indexer4.nm.flipkart.com -t screen -D -R'
-alias fk-projects='cd $HOME/Flipkart/projects'
-alias fk-tail-agent-log='stt fk-tail-agent-logs; tail -f /var/log/flipkart/w3/agent/agent.log'
+source .bash_aliases_fk
