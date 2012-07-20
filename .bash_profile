@@ -37,6 +37,7 @@ export PS1='\[\033[1;30m\][$(date +%T)] \n\[\033[0;32m\]\h:\[\033[1;32m\]\w \[\0
 #export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
 
 function stt() {
+	## set terminal title
 	echo -en "\033]2;$1\007"
 	#PS1=$(echo $PS1 |sed 's/^.*\\007//')
 	#export PS1="\033]0;$1\007$PS1"
