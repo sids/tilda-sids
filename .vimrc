@@ -68,7 +68,7 @@ colorscheme sids-desert
 
 " Status Line *****************************************************************
 set showcmd
-set ruler " Show ruler
+"set ruler " Show ruler
 "set ch=2 " Make command line two lines high
 
 
