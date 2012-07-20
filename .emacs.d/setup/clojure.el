@@ -1,4 +1,22 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; slime
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(eval-after-load "slime"
+  '(progn
+     (require 'swank-clojure-extra)
+     (add-to-list 'slime-lisp-implementations `(clojure ,(swank-clojure-cmd)
+                                                        :init swank-clojure-init)
+                  t)
+     (add-hook 'slime-indentation-update-hooks 'swank-clojure-update-indentation)
+     (add-hook 'slime-repl-mode-hook 'swank-clojure-slime-repl-modify-syntax t)
+     (add-hook 'clojure-mode-hook 'swank-clojure-slime-mode-hook t)))
+
+;; needed for overriding default method for invoking slime
+(ad-activate 'slime-read-interactive-args)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; swank-clojure
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -28,18 +46,3 @@
 					;"-XX:+UseCompressedOops"
 					"-XX:MaxInlineSize=1024"
 					"-XX:FreqInlineSize=1024"))
-
-;;9986646984
-
-(eval-after-load "slime"
-  '(progn
-     (require 'swank-clojure-extra)
-     (add-to-list 'slime-lisp-implementations `(clojure ,(swank-clojure-cmd)
-							:init swank-clojure-init)
-		  t)
-     (add-hook 'slime-indentation-update-hooks 'swank-clojure-update-indentation)
-     (add-hook 'slime-repl-mode-hook 'swank-clojure-slime-repl-modify-syntax t)
-     (add-hook 'clojure-mode-hook 'swank-clojure-slime-mode-hook t)))
-
-;; needed for overriding default method for invoking slime
-(ad-activate 'slime-read-interactive-args)
