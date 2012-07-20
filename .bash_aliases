@@ -33,4 +33,4 @@ alias gst='git stash'
 
 
 #### Flipkart specific ####
-source .bash_aliases_fk
+source $HOME/.bash_aliases_fk
