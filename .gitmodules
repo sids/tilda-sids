@@ -22,3 +22,6 @@
 [submodule ".emacs.d/vendor/dtrt-indent"]
 	path = .emacs.d/vendor/dtrt-indent
 	url = git://git.savannah.nongnu.org/dtrt-indent.git
+[submodule ".emacs.d/vendor/expand-region"]
+	path = .emacs.d/vendor/expand-region
+	url = https://github.com/magnars/expand-region.el.git
