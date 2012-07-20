@@ -18,6 +18,8 @@ alias ctags=`brew --prefix`/bin/ctags
 
 #### git shortcuts ####
 alias g=git
+alias gl='git log --graph --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
+alias gl='git log1'
 alias gb='git branch'
 alias gco='git commit'
 alias gch='git checkout'
