@@ -38,3 +38,5 @@
 	sta = stash apply
 	stp = stash pop
 	log1 = log --oneline --decorate
+[push]
+	default = tracking
