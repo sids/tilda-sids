@@ -53,4 +53,3 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
 #### Options for other programs ####
 export EDITOR=vim
-export CATALINA_OPTS="-Dsolr.solr.home=/opt/solr -Xmx1024m"
