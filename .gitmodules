@@ -9,7 +9,7 @@
 	url = https://github.com/sellout/emacs-color-theme-solarized.git
 [submodule ".emacs.d/vendor/slime"]
 	path = .emacs.d/vendor/slime
-	url = https://github.com/nablaone/slime.git
+	url = https://github.com/technomancy/slime.git
 [submodule ".emacs.d/vendor/swank-clojure-extra"]
 	path = .emacs.d/vendor/swank-clojure-extra
 	url = https://github.com/vu3rdd/swank-clojure-extra.git
