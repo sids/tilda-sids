@@ -39,11 +39,11 @@
 (defvar *peepopen-project-root* nil
   "Used internally to cache the project root.")
 
+(defvar *peepopen-project-root-start* "~/")
+
 (defun peepopen-project-root ()
   "Returns the current project root."
-  (when (or
-         (null *peepopen-project-root*)
-         (not (string-match *peepopen-project-root* default-directory)))
+  (when (null *peepopen-project-root*)
     (let ((root (peepopen-find-project-root)))
       (if root
           (setq *peepopen-project-root* (expand-file-name (concat root "/")))
@@ -71,10 +71,19 @@
 
 (defun peepopen-set-project-root (root)
   "Sets the current project root interactively."
-  (interactive (list (read-directory-name "Peepopen for project: " nil)))
+  (interactive (list (read-directory-name "Peepopen for project: "
+					  *peepopen-project-root-start*)))
   (flet ((root () (file-truename root)))
     (setq *peepopen-project-root* root)))
 
+(defun peepopen-set-project-root (&optional root)
+  "Sets the current project root interactively."
+  (interactive)
+  (let ((root (or
+	       root
+               (read-directory-name "Peepopen for project: "
+				    *peepopen-project-root-start*))))
+    (setq *peepopen-project-root* root)))
 
 (defun peepopen-goto-file-gui ()
   "Uses external GUI app to quickly jump to a file in the project."
@@ -91,5 +100,11 @@
      (format "open 'peepopen://%s?editor=%s'"
              (expand-file-name root)
              (invocation-name)))))
+
+(defun peepopen-goto-file-in-project-gui ()
+  "Interactively set peepopen project root and then call peepopen-goto-file-gui."
+  (interactive)
+  (peepopen-set-project-root)
+  (peepopen-goto-file-gui))
 
 (provide 'peepopen-standalone)
