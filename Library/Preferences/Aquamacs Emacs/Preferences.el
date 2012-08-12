@@ -7,3 +7,5 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (setq ns-pop-up-frames nil)
+
+(remove-hook 'kill-emacs-query-functions 'aquamacs-ask-to-save-options)
