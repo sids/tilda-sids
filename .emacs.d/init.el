@@ -109,6 +109,8 @@
 
 (dot-load-setups '("clojure"))
 
+(dot-load-setups '("peepopen"))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Experimental
