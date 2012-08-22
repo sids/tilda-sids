@@ -4,7 +4,7 @@
   (interactive)
   (color-theme-install
    '(my-color-theme
-     ((background-color . "#1a1a1c")
+     ((background-color . "#33333e")
       (background-mode . dark)
       (border-color . "black")
       (cursor-color . "Red")
@@ -168,7 +168,7 @@
      (hi-yellow ((t (:background "yellow1"))))
      (highlight ((t (:background "#111111"))))
      (highlight-symbol-face ((t (:background "#2a2a2c"))))
-     (hl-line ((t (:background "Black"))))
+     (hl-line ((t (:background "#22222d"))))
      (hl-paren-face ((t (nil))))
      (ido-first-match ((t (:foreground "Green"))))
      (ido-incomplete-regexp ((t (:background "#EE799F" :foreground "red"))))
@@ -319,7 +319,7 @@
      (paren-face-mismatch ((t (:background "DarkRed" :foreground "Black"))))
      (paren-face-no-match ((t (:background "DarkOrange" :foreground "Black"))))
      (query-replace ((t (:background "magenta3" :foreground "lightskyblue1"))))
-     (region ((t (:background "#2a2a2c"))))
+     (region ((t (:background "#44444f"))))
      (rng-error ((t (:background "#EE799F" :foreground "red"))))
      (rngalt-validation-header-bottom ((t (:background "RGB:87/CE/FA" :foreground "white"))))
      (rngalt-validation-header-top ((t (:background "white" :foreground "RGB:87/CE/FA"))))
