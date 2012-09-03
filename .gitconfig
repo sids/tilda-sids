@@ -32,7 +32,7 @@
 	stl = stash list
 	sta = stash apply
 	stp = stash pop
-	log1 = log --oneline --decorate
+	log1 = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
 	fkp = "!f(){ [ \"$1\" == \"-nd\" ] && no=-nodeploy && shift; [ \"$1\" == \"-nb\" ] && no=-nobuild && shift; [ \"$#\" -ne 1 ] && echo \"USAGE: git fkp [-nd|-nb] <env>\" && exit 1; set -x; git pull && git tag -m\"Promoting to $1.\" release/$1-$(date +%Y.%m.%d-%H.%M.%S)$no && git push && git push --tags;};f"
 [push]
 	default = tracking
