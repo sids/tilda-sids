@@ -27,13 +27,14 @@ fi
 
 
 #### Command prompt ####
-function ggbfp {
+function git_info {
 	## get git branch for prompt
-	if [ "$HOME" != "$(git rev-parse --show-toplevel 2>/dev/null)" ]; then
-		git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git: \1)/'
-	fi
+	echo -n "// git: "
+	echo -n $(git rev-parse --show-toplevel 2>/dev/null |sed "s|$HOME|~|g")
+	echo -n " | "
+	echo -n $(git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 }
-export PS1='\[\033[0;36m\][$(date +%T)] \n\[\033[0;33m\]\h:\[\033[1;32m\]\w \[\033[0;36m\]$(ggbfp) \[\033[1;31m\]\n$ \[\033[0m\]'
+export PS1='\[\033[0;36m\][$(date +%T)] \n\[\033[0;33m\]\h:\[\033[1;32m\]\w \[\033[0;36m\]$(git_info) \[\033[1;31m\]\n$ \[\033[0m\]'
 #export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
 
 function stt() {
