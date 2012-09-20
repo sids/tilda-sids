@@ -107,8 +107,6 @@
                    "highlighting"
                    "parentheses"))
 
-(dot-load-setups '("clojure"))
-
 (dot-load-setups '("peepopen"))
 
 
