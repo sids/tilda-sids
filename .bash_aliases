@@ -14,6 +14,7 @@ alias egrep='egrep --color=auto'
 alias aq=aquamacs
 alias mvi=mvim
 alias ctags=`brew --prefix`/bin/ctags
+alias em='/usr/local/Cellar/emacs/24.1/Emacs.app/Contents/MacOS/Emacs -nw'
 
 
 #### git shortcuts ####
