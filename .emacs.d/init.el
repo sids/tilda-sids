@@ -14,6 +14,8 @@
 (cua-mode t)
 (transient-mark-mode 1)
 (delete-selection-mode t)
+(setq visible-bell t)
+;;(setq ring-bell-function (lambda () (message "*beep*")))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;;(setq tags-revert-without-query 1)
