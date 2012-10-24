@@ -1,0 +1,1 @@
+../vendor/solarized/solarized-dark-theme.el

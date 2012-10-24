@@ -31,3 +31,12 @@
 [submodule ".emacs.d/vendor/ace-jump-mode"]
 	path = .emacs.d/vendor/ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode.git
+[submodule ".emacs.d/vendor/zenburn"]
+	path = .emacs.d/vendor/zenburn
+	url = https://github.com/bbatsov/zenburn-emacs.git
+[submodule ".emacs.d/vendor/solarized"]
+	path = .emacs.d/vendor/solarized
+	url = https://github.com/bbatsov/solarized-emacs.git
+[submodule ".emacs.d/vendor/cyberpunk-theme"]
+	path = .emacs.d/vendor/cyberpunk-theme
+	url = https://github.com/n3mo/cyberpunk-theme.el.git
