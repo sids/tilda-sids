@@ -4,9 +4,4 @@
 ;; evaluating this file and print errors in the *Messags* buffer.
 ;; Use this file in place of ~/.emacs (which is loaded as well.)
 
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(setq ns-pop-up-frames nil)
-(tabbar-mode -1)
-
 (remove-hook 'kill-emacs-query-functions 'aquamacs-ask-to-save-options)

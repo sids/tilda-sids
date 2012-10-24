@@ -31,6 +31,18 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; GUI specific options
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'tabbar-mode) (tabbar-mode -1))
+(setq ns-pop-up-frames nil)
+(setq inhibit-startup-message t)
+(setq initial-scratch-message nil)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setup symbols pointing to dirs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
