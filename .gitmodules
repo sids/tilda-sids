@@ -40,3 +40,6 @@
 [submodule ".emacs.d/vendor/cyberpunk-theme"]
 	path = .emacs.d/vendor/cyberpunk-theme
 	url = https://github.com/n3mo/cyberpunk-theme.el.git
+[submodule ".emacs.d/vendor/ac-nrepl"]
+	path = .emacs.d/vendor/ac-nrepl
+	url = https://github.com/purcell/ac-nrepl.git
