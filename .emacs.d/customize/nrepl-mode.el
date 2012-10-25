@@ -18,14 +18,6 @@
   '(add-to-list 'ac-modes 'nrepl-mode))
 
 
-;; Trigger autocomplete using TAB in nrepl buffers
-(defun set-auto-complete-as-completion-at-point-function ()
-  (setq completion-at-point-functions '(auto-complete)))
-(add-hook 'auto-complete-mode-hook 'set-auto-complete-as-completion-at-point-function)
-
-(add-hook 'nrepl-mode-hook 'set-auto-complete-as-completion-at-point-function)
-(add-hook 'nrepl-interaction-mode-hook 'set-auto-complete-as-completion-at-point-function)
-
 ;; Make C-c C-z switch to the *nrepl* buffer in the current window:
 ;;(add-to-list 'same-window-buffer-names "*nrepl*")
 
