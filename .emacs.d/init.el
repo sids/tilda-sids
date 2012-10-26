@@ -16,6 +16,8 @@
 (delete-selection-mode t)
 (setq visible-bell t)
 ;;(setq ring-bell-function (lambda () (message "*beep*")))
+(savehist-mode 1)
+(setq savehist-additional-variables '(kill-ring search-ring regexp-search-ring))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;;(setq tags-revert-without-query 1)
@@ -93,8 +95,9 @@
 
 (load-library "my-functions")
 
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Load mode setups
+;; Load mode customizations
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (let ((base (file-name-as-directory (concat dot-customize-dir))))
@@ -102,6 +105,7 @@
     (let ((name (concat base "/" f)))
       (when (not (file-directory-p name))
         (load-file name)))))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Load setups
