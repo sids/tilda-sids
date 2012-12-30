@@ -18,6 +18,7 @@
 ;;(setq ring-bell-function (lambda () (message "*beep*")))
 (savehist-mode 1)
 (setq savehist-additional-variables '(kill-ring search-ring regexp-search-ring))
+(setq cua-auto-mark-last-change t)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;;(setq tags-revert-without-query 1)
