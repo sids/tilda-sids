@@ -13,10 +13,10 @@
 	excludesfile = /Users/sids/.gitignore
 	whitespace = cr-at-eol
 [difftool "diffmerge"]
-	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+	cmd = diffmerge $LOCAL $REMOTE
 [mergetool "diffmerge"]
-	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
-	trustexitcode = false
+	cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
 [alias]
 	b = branch
 	co = commit
@@ -34,7 +34,14 @@
 	stp = stash pop
 	log1 = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%Creset %Cgreen(%cr) %C(cyan)<%an>%Creset %n %s %n' --abbrev-commit --date=relative
 	fkp = "!f(){ [ \"$1\" == \"-nd\" ] && no=-nodeploy && shift; [ \"$1\" == \"-nb\" ] && no=-nobuild && shift; branch=$2 branch=${branch:=master}; [ \"$#\" -lt 1 ] && echo \"USAGE: git fkp [-nd|-nb] <env> <branch>\" && exit 1; set -x; git tag -m \"Promoting to $1.\" release/$1-$(date +%Y%m%d-%H%M%S)$no origin/$branch && git push --tags;};f"
+	bc = !sh -c \"git log HEAD..$1\"
 [push]
 	default = tracking
 [log]
 	decorate = short
+[merge]
+	tool = diffmerge
+[mergetool]
+	keepBackup = false
+[diff]
+	tool = diffmerge
