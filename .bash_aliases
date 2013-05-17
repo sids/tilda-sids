@@ -11,6 +11,7 @@ alias egrep='egrep --color=auto'
 
 
 #### Application shortcuts ####
+alias hussh='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 alias aq='open -a Aquamacs\ Emacs'
 alias mvi=mvim
 alias ctags=`brew --prefix`/bin/ctags
