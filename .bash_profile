@@ -8,6 +8,9 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 
+case "$TERM" in
+	"screen-256color") TERM=xterm-256color
+esac
 
 #### Colorify; it's good for the eyes. ####
 export CLICOLOR=true
