@@ -34,13 +34,20 @@ function git_info {
 	## get git branch for prompt
 	repo_dir=$(git rev-parse --show-toplevel 2>/dev/null);
 	if [ ! -z "$repo_dir" ]; then
-		echo -n "	// git: "
-		echo -n $(echo $repo_dir |sed "s|$HOME|~|g")
-		echo -n " | "
-		echo -n $(git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+		echo -en "\033[1;30m	// git: \033[0;36m"
+		echo -en $(echo $repo_dir |sed "s|$HOME|~|g")
+		echo -en "\033[0;30m | "
+		if [ -n "$(git status |grep 'nothing to commit')" ]; then
+			echo -en "\033[0;32m"
+		elif [ -n "$(git status |grep '# Changes ')" ]; then
+			echo -en "\033[0;31m"
+		else
+			echo -en "\033[0;36m"
+		fi
+		echo -en $(git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 	fi
 }
-export PS1='\[\033[0;36m\][$(date +%T)] \n\[\033[0;33m\]\h:\[\033[1;32m\]\w \[\033[0;36m\]$(git_info) \[\033[1;31m\]\n$ \[\033[0m\]'
+export PS1='\[\033[1;30m\][$(date +%T)] \n\[\033[0;33m\]\h:\[\033[1;32m\]\w \[\033[0;36m\]$(git_info) \[\033[1;31m\]\n$ \[\033[0m\]'
 #export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
 
 function stt() {
