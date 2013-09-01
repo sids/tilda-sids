@@ -13,6 +13,5 @@
      (add-hook 'clojure-mode-hook 'enable-paredit-mode)
      (add-hook 'clojure-mode-hook 'highlight-parentheses-mode)
      (add-hook 'clojure-mode-hook 'clojure-enable-nrepl)
-     ;;(add-hook 'clojure-mode-hook '(lambda () (slime-mode -1)))
      (add-hook 'clojure-mode-hook '(lambda () (paren-face-add-support
 					       clojure-font-lock-keywords)))))
