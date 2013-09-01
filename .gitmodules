@@ -43,3 +43,12 @@
 [submodule ".emacs.d/vendor/ac-nrepl"]
 	path = .emacs.d/vendor/ac-nrepl
 	url = https://github.com/purcell/ac-nrepl.git
+[submodule ".emacs.d/vendor/dash.el"]
+	path = .emacs.d/vendor/dash.el
+	url = https://github.com/magnars/dash.el.git
+[submodule ".emacs.d/vendor/pkg-info.el"]
+	path = .emacs.d/vendor/pkg-info.el
+	url = https://github.com/lunaryorn/pkg-info.el.git
+[submodule ".emacs.d/vendor/s.el"]
+	path = .emacs.d/vendor/s.el
+	url = https://github.com/magnars/s.el.git
