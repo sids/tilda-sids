@@ -15,8 +15,9 @@ alias hussh='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 alias aq='open -a Aquamacs\ Emacs'
 alias mvi=mvim
 alias ctags=`brew --prefix`/bin/ctags
-alias em='open -a Emacs'
-alias emacs-nw='/usr/local/Cellar/emacs/24.1/Emacs.app/Contents/MacOS/Emacs -nw'
+alias e='open -a Emacs'
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias poe='open peepopen://$(pwd)?editor=Emacs'
 
 
 #### git shortcuts ####
