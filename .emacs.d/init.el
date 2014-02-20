@@ -43,7 +43,7 @@
 (setq ns-pop-up-frames nil)
 (setq inhibit-startup-message t)
 (setq initial-scratch-message nil)
-
+(setq initial-major-mode 'fundamental-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Setup symbols pointing to dirs
