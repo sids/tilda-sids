@@ -99,7 +99,12 @@
     (shell-command-to-string
      (format "open 'peepopen://%s?editor=%s'"
              (expand-file-name root)
-             (invocation-name)))))
+             ;;(invocation-name)
+	     ;; TODO: Change back to above instead of hardcoding
+	     ;; "Emacs" below. Since Emacs 24.3 on Mac OS X this is
+	     ;; returning Emacs-10.7 instead of just "Emacs" which
+	     ;; causes the command to fail.
+	     "Emacs"))))
 
 (defun peepopen-goto-file-in-project-gui ()
   "Interactively set peepopen project root and then call peepopen-goto-file-gui."
