@@ -6,8 +6,20 @@
 (load-theme 'cyberpunk t)
 
 (set-face-attribute 'default nil
-                    :family "DejaVu Sans Mono" :height 115 :weight 'normal)
-;;(setq mac-allow-anti-aliasing 1)
+                    :family "DejaVu Sans Mono" :height 120 :weight 'normal)
+(set-face-attribute 'default nil
+                    :family "Bitstream Vera Sans Mono" :height 120 :weight 'normal)
+(set-face-attribute 'default nil
+                    :family "Anonymous_Pro" :height 140 :weight 'normal)
+(set-face-attribute 'default nil
+                    :family "Droid Sans Mono" :height 120 :weight 'normal)
+(set-face-attribute 'default nil
+                    :family "Inconsolata" :height 140 :weight 'normal)
+
+;; execute the following command and it'll print the current font settings
+;; (insert "\n(set-default-font \"" (cdr (assoc 'font (frame-parameters))) "\")\n")
+(set-default-font "-apple-Anonymous_Pro-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+
 
 (set-background-color "#1a1a1e")
 
