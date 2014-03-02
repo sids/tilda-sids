@@ -123,7 +123,6 @@
 (dot-load-setups '("appearance"
                    "keyboard-shortcuts"
                    "indentation"
-                   "highlighting"
                    "parentheses"))
 
 (dot-load-setups '("peepopen"))
