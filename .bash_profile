@@ -68,6 +68,4 @@ export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
 #### Options for other programs ####
 export EDITOR=vim
-
-
-export M2_HOME=
+export M2_HOME=  # Has become necessary to run maven, unsure why

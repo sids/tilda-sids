@@ -15,8 +15,13 @@ alias hussh='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
 alias aq='open -a Aquamacs\ Emacs'
 alias mvi=mvim
 alias ctags=`brew --prefix`/bin/ctags
-alias e='open -a Emacs'
+
+## Emacs
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
+alias emacsg='open -a Emacs'
+alias e='emacsclient -t'
+alias eg='emacsclient -c'
 alias poe='open peepopen://$(pwd)?editor=Emacs'
 
 
