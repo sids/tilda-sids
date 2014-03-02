@@ -1,13 +1,17 @@
 ;; KeyboardMacrosTricks:
 ;; http://www.emacswiki.org/emacs/KeyboardMacrosTricks
 
+(if (require 'guru-mode nil 'noerror)
+    (guru-global-mode +1)
+  (setq guru-warn-only nil))
+
+(if (require 'dot-mode nil 'noerror)
+    (global-set-key [(control ?.)] (lambda ()
+				     (interactive) (dot-mode 1))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Keyboard shortcuts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(if (require 'guru-mode nil 'noerror)
-  (guru-global-mode +1)
-  (setq guru-warn-only nil))
 
 ;; moving between buffers
 (global-set-key (kbd "C-`") 'next-buffer)

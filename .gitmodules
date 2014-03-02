@@ -49,3 +49,6 @@
 [submodule ".emacs.d/vendor/guru-mode"]
 	path = .emacs.d/vendor/guru-mode
 	url = https://github.com/bbatsov/guru-mode.git
+[submodule ".emacs.d/vendor/dot-mode"]
+	path = .emacs.d/vendor/dot-mode
+	url = https://github.com/wyrickre/dot-mode.git
