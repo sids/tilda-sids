@@ -7,12 +7,12 @@
 (setq tab-width 4)
 (setq indent-tabs-mode nil)
 
-(require 'dtrt-indent)
+(require 'dtrt-indent nil 'noerror)
 ;; This auto-detects indentation mode of the file and adopts that,
 ;; ensuring that I don't spoil indentation in existing files
 (add-hook 'c-mode-common-hook 
   (lambda()
-    (require 'dtrt-indent)
-    (dtrt-indent-mode t)))
+    (if (require 'dtrt-indent nil 'noerror)
+      (dtrt-indent-mode t))))
 ;; Other ways of customizing file specific indentation:
 ;; http://emacs-fu.blogspot.com/2008/12/auto-detecting-indentation-style.html

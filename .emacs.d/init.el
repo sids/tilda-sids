@@ -21,7 +21,7 @@
 (setq cua-auto-mark-last-change t)
 
 (defalias 'yes-or-no-p 'y-or-n-p)
-;;(setq tags-revert-without-query 1)
+;(setq tags-revert-without-query 1)
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
