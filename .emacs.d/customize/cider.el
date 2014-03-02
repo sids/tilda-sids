@@ -25,9 +25,11 @@
 
 (setq cider-repl-history-file "~/.emacs.d/cider-history")
 
-(add-hook 'cider-repl-mode-hook 'subword-mode)
-(add-hook 'cider-repl-mode-hook 'paredit-mode)
-;(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
+(add-hook-safe 'cider-repl-mode-hook 'subword-mode)
+(add-hook-safe 'cider-repl-mode-hook 'paredit-mode)
+(add-hook-safe 'cider-repl-mode-hook 'rainbow-delimiters-mode)
+
+;;;; Following are customizations leftover from when cider used to be nrepl.el
 
 ;; Tips:
 ;; http://ianeslick.com/2013/05/17/clojure-debugging-13-emacs-nrepl-and-ritz/

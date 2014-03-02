@@ -4,6 +4,10 @@
 ;; http://github.com/walter/aquamacs-emacs-starter-kit
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defun add-hook-safe (to f)
+  (if (and (boundp to) (boundp f))
+    (add-hook to f)))
+
 (defun indent-buffer ()
   (interactive)
   (indent-region (point-min) (point-max)))
