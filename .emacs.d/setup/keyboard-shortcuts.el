@@ -5,6 +5,10 @@
 ;;;; Keyboard shortcuts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(if (require 'guru-mode nil 'noerror)
+  (guru-global-mode +1)
+  (setq guru-warn-only nil))
+
 ;; moving between buffers
 (global-set-key (kbd "C-`") 'next-buffer)
 (global-set-key (kbd "M-`") 'previous-buffer)
