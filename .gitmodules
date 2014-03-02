@@ -22,9 +22,6 @@
 [submodule ".emacs.d/vendor/expand-region"]
 	path = .emacs.d/vendor/expand-region
 	url = https://github.com/magnars/expand-region.el.git
-[submodule ".emacs.d/vendor/nrepl.el"]
-	path = .emacs.d/vendor/nrepl.el
-	url = https://github.com/kingtim/nrepl.el.git
 [submodule ".emacs.d/vendor/ace-jump-mode"]
 	path = .emacs.d/vendor/ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode.git
@@ -37,9 +34,6 @@
 [submodule ".emacs.d/vendor/cyberpunk-theme"]
 	path = .emacs.d/vendor/cyberpunk-theme
 	url = https://github.com/n3mo/cyberpunk-theme.el.git
-[submodule ".emacs.d/vendor/ac-nrepl"]
-	path = .emacs.d/vendor/ac-nrepl
-	url = https://github.com/purcell/ac-nrepl.git
 [submodule ".emacs.d/vendor/dash.el"]
 	path = .emacs.d/vendor/dash.el
 	url = https://github.com/magnars/dash.el.git
@@ -49,3 +43,6 @@
 [submodule ".emacs.d/vendor/s.el"]
 	path = .emacs.d/vendor/s.el
 	url = https://github.com/magnars/s.el.git
+[submodule ".emacs.d/vendor/cider"]
+	path = .emacs.d/vendor/cider
+	url = https://github.com/clojure-emacs/cider.git
