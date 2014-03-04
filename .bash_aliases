@@ -17,11 +17,12 @@ alias mvi=mvim
 alias ctags=`brew --prefix`/bin/ctags
 
 ## Emacs
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+alias emacs-nw='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
-alias emacsg='open -a Emacs'
-alias e='emacsclient -t'
-alias eg='emacsclient -c'
+alias e='open -a Emacs'
+alias ect='emacsclient -t'
+alias ecg='emacsclient -c'
 alias poe='open peepopen://$(pwd)?editor=Emacs'
 
 
