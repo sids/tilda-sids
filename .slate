@@ -1,0 +1,89 @@
+# Configs
+config defaultToCurrentScreen true
+config checkDefaultsOnLoad true
+config orderScreensLeftToRight false
+
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+#config windowHintsDuration 5
+config windowHintsSpread true
+#config windowHintsOrder persist
+
+# Monitor Aliases
+alias mon-internal      0
+alias mon-external      1
+
+# Misc Aliases
+alias showHintsLeftHand hint ASDFGH
+alias showNormalHint hint ASDFGHQWERTY
+
+# Abstract positions
+alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
+alias lefthalf      move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
+alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
+alias rightmost     move screenOriginX+screenSizeX*0.4;screenOriginY  screenSizeX*0.6;screenSizeY
+alias rightless     move screenOriginX+screenSizeX*0.6;screenOriginY  screenSizeX*0.4;screenSizeY
+alias leftmost      move screenOriginX;screenOriginY                  screenSizeX*0.6;screenSizeY
+alias leftless      move screenOriginX;screenOriginY                  screenSizeX*0.4;screenSizeY
+# Concrete positions
+alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-internal}
+alias 1-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-internal}
+alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-internal}
+alias 2-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-external}
+alias 2-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-external}
+alias 2-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-external}
+alias 2-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-external}
+alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${mon-external}
+
+# 2 Monitor layout
+layout 2monitors 'iTerm':REPEAT                      ${2-full}
+layout 2monitors 'Google Chrome':REPEAT              ${1-full}
+layout 2monitors 'Firefox':REPEAT                    ${1-full}
+layout 2monitors 'IntelliJ IDEA':REPEAT              ${1-full}
+layout 2monitors 'Calendar':REPEAT                   ${1-full}
+layout 2monitors 'LimeChat':REPEAT                   ${1-full}
+layout 2monitors 'Evernote':REPEAT                   ${1-full}
+
+# 1 Monitor layout
+layout 1monitor 'iTerm':REPEAT                       ${1-full}
+layout 1monitor 'Google Chrome':REPEAT               ${1-full}
+layout 1monitor 'Firefox':REPEAT                     ${1-full}
+layout 1monitor 'IntelliJ IDEA':REPEAT               ${1-full}
+layout 1monitor 'Calendar':REPEAT                    ${1-full}
+layout 1monitor 'LimeChat':REPEAT                    ${1-full}
+layout 1monitor 'Evernote':REPEAT                    ${1-full}
+
+# Default Layouts
+default 2monitors count:2 #resolutions:${mon-internal};${mon-external};
+default 1monitor  count:1 #resolutions:${mon-internal}
+
+# ======================================
+# The HYPER key
+# ======================================
+ 
+alias hyper ctrl;shift;alt;cmd
+
+bind e:${hyper}  ${showNormalHint}
+
+# Location bindings
+bind [:${hyper} ${lefthalf}
+bind return:${hyper} ${full}
+bind ]:${hyper} ${righthalf}
+bind n:${hyper} throw next
+bind p:${hyper} throw previous
+
+# Focus Bindings
+bind right:${hyper}    focus right
+bind left:${hyper}     focus left
+bind up:${hyper}       focus up
+bind down:${hyper}     focus down
+
+# App bindings
+bind t:${hyper} focus 'iTerm'
+bind b:${hyper} focus 'Google Chrome'
+bind f:${hyper} focus 'Firefox'
+bind i:${hyper} focus 'IntelliJ IDEA'
+bind c:${hyper} focus 'Calendar'
+bind l:${hyper} focus 'LimeChat'
+bind s:${hyper} focus 'Safari'
+bind e:${hyper} focus 'Evernote'
