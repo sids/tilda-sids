@@ -1,13 +1,15 @@
 ;; KeyboardMacrosTricks:
 ;; http://www.emacswiki.org/emacs/KeyboardMacrosTricks
 
-(if (require 'guru-mode nil 'noerror)
-    (guru-global-mode +1)
-  (setq guru-warn-only nil))
+;; (if (require 'guru-mode nil 'noerror)
+;;     (guru-global-mode +1)
+;;   (setq guru-warn-only nil))
 
 (if (require 'dot-mode nil 'noerror)
     (global-set-key [(control ?.)] (lambda ()
 				     (interactive) (dot-mode 1))))
+
+(setq suggest-key-bindings 3)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; Keyboard shortcuts
@@ -31,10 +33,10 @@
 (global-set-key (kbd "C-x C-k") 'kill-current-buffer)
 
 (global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
+(global-set-key (kbd "C-c c") 'copy-line)
+(global-set-key (kbd "C-c t") 'transpose-lines)
 
 (global-set-key (kbd "<f7>") 'switch-to-minibuffer-window)
-
-(global-set-key (kbd "C-c y") 'copy-line)
 
 ;; vim command-mode like %
 (global-set-key "%" 'match-paren)
@@ -46,3 +48,8 @@
 	;((looking-at "\\s\)") (forward-char 1) (backward-list 1))
 	((looking-back "\\s\)") (forward-char 1) (backward-list 1))
 	(t (self-insert-command (or arg 1)))))
+
+;; ido keyboard shortcuts
+(global-set-key (kbd "s-`") 'ido-switch-buffer)
+(global-set-key (kbd "C-x C-p") 'ido-find-file-in-tag-files)
+(global-set-key (kbd "C-x C-t") 'ido-find-tag)

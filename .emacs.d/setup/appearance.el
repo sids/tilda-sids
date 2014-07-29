@@ -5,15 +5,16 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'cyberpunk t)
 
+(set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 120 :weight 'normal)
+(set-face-attribute 'default nil :family "Bitstream Vera Sans Mono" :height 120 :weight 'normal)
+(set-face-attribute 'default nil :family "Anonymous_Pro" :height 140 :weight 'normal)
+(set-face-attribute 'default nil :family "Droid Sans Mono" :height 120 :weight 'normal)
+(set-face-attribute 'default nil  :family "Inconsolata" :height 140 :weight 'normal)
+
 ;; Hint: execute the following command and it'll print the current font settings
 ;; (insert "\n(set-default-font \"" (cdr (assoc 'font (frame-parameters))) "\")\n")
 
-;(set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 120 :weight 'normal)
-;(set-face-attribute 'default nil :family "Bitstream Vera Sans Mono" :height 120 :weight 'normal)
-;(set-face-attribute 'default nil :family "Anonymous_Pro" :height 140 :weight 'normal)
-;(set-frame-font "-apple-Anonymous_Pro-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
-;(set-face-attribute 'default nil  :family "Inconsolata" :height 140 :weight 'normal)
-(set-face-attribute 'default nil :family "Droid Sans Mono" :height 120 :weight 'normal)
+(set-frame-font "-apple-Anonymous_Pro-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 
 (set-background-color "#1a1a1e")
 
@@ -54,7 +55,7 @@
 ;; Mode-specific appearance
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(if (boundp 'highlight-parentheses)
+(if (boundp 'highlight-parentheses-mode)
   (setq hl-paren-colors '("SandyBrown" "SaddleBrown" "RosyBrown")))
 
 (defcustom highlight-symbol-colors
@@ -64,6 +65,7 @@ highlighting the symbols will use these colors in order."
   :type '(repeat color)
   :group 'highlight-symbol)
 
-(if (boundp 'auto-complete)
-  (set-face-background 'ac-completion-face nil))
+(if (boundp 'auto-complete-mode)
+    (set-face-background 'ac-completion-face nil))
+
 

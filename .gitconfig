@@ -2,7 +2,7 @@
 	whitespace = nowarn
 [user]
 	name = Siddhartha Reddy
-	email = sids@grok.in
+	email = siddhartha@flipkart.com
 [color]
 	diff = auto
 	status = auto
@@ -45,3 +45,8 @@
 	keepBackup = false
 [diff]
 	tool = diffmerge
+[github]
+	user = sids
+	token = 9a3466350f7251f91ba613cf3cc2efbbbdd3c02b
+[credential]
+	helper = osxkeychain

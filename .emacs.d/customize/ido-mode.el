@@ -75,8 +75,3 @@
 	  tags-completion-table)
     (find-tag (ido-completing-read "Tag: " tag-names))))
 
-
-;; ido keyboard shortcuts
-(global-set-key (kbd "<f4>") 'ido-switch-buffer)
-(global-set-key (kbd "C-x C-p") 'ido-find-file-in-tag-files)
-(global-set-key (kbd "C-x C-t") 'ido-find-tag)
