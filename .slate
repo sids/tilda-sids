@@ -40,8 +40,8 @@ layout 2monitors 'iTerm':REPEAT                      ${2-full}
 layout 2monitors 'Google Chrome':REPEAT              ${1-full}
 layout 2monitors 'Firefox':REPEAT                    ${1-full}
 layout 2monitors 'IntelliJ IDEA':REPEAT              ${1-full}
-layout 2monitors 'Calendar':REPEAT                   ${1-full}
-layout 2monitors 'LimeChat':REPEAT                   ${1-full}
+layout 2monitors 'Calendar':REPEAT                   ${2-full}
+layout 2monitors 'LimeChat':REPEAT                   ${2-full}
 layout 2monitors 'Evernote':REPEAT                   ${1-full}
 
 # 1 Monitor layout
