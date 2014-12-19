@@ -23,8 +23,8 @@
 (setq confirm-nonexistent-file-or-buffer nil)
 
 ;; sort files by last modified time
-(add-hook 'ido-make-file-list-hook 'ido-sort-mtime)
-(add-hook 'ido-make-dir-list-hook 'ido-sort-atime)
+;(add-hook 'ido-make-file-list-hook 'ido-sort-mtime)
+;(add-hook 'ido-make-dir-list-hook 'ido-sort-atime)
 
 (defun ido-sort-mtime ()
   (setq ido-temp-list
