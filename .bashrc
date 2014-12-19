@@ -76,3 +76,4 @@ function java_use() {
 #### Options for other programs ####
 export EDITOR=vim
 export M2_HOME=  # Has become necessary to run maven, unsure why
+export GOPATH=$HOME/go:$HOME/src/fk/go
