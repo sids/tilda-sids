@@ -65,6 +65,13 @@ function stt() {
 export PATH=/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:/usr/local/mysql/bin:$HOME/.go/bin:$HOME/src/fk/go/bin
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
+alias java_ls='/usr/libexec/java_home -V 2>&1 | grep -E "\d.\d.\d[,_]" | cut -d , -f 1 | colrm 1 4 | grep -v Home'
+
+function java_use() {
+    export JAVA_HOME=$(/usr/libexec/java_home -v $1)
+    export PATH=$JAVA_HOME/bin:$PATH
+    java -version
+}
 
 #### Options for other programs ####
 export EDITOR=vim
