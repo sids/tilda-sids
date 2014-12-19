@@ -62,7 +62,7 @@ function stt() {
 
 
 #### Paths ####
-export PATH=/usr/local/bin:$HOME/bin:$PATH:/usr/local/mysql/bin
+export PATH=/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:/usr/local/mysql/bin:$HOME/.go/bin:$HOME/src/fk/go/bin
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
 
