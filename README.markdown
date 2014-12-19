@@ -11,6 +11,17 @@ depend on for my everyday life.
 
 My primary platforms are Mac OS X and GNU/Linux (Debian/Ubuntu).
 
+Installation
+============
+
+This is how I end up importing these settings into a fresh install of Max OS X:
+
+    git init .
+    git remote add -t \* -f origin https://github.com/sids/tilda-sids
+    git checkout master
+
+(From [StackOverflow](https://stackoverflow.com/questions/9864728/how-to-get-git-to-clone-into-current-directory/16811212#16811212))
+
 LICENSE / COPYING
 =================
 
