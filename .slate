@@ -32,16 +32,20 @@ alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2
 alias 2-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-external}
 alias 2-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-external}
 alias 2-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-external}
+alias 2-top         move screenOriginX;screenOriginY screenSizeX;screenSizeY/2       ${mon-external}
+alias 2-bottom      move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX;screenSizeY       ${mon-external}
+alias 2-lefttop     move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-external}
 alias 2-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-external}
 alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${mon-external}
 
 # 2 Monitor layout
-layout 2monitors 'iTerm':REPEAT                      ${2-full}
+layout 2monitors 'iTerm':REPEAT                      ${2-lefttop}
 layout 2monitors 'Google Chrome':REPEAT              ${1-full}
 layout 2monitors 'Firefox':REPEAT                    ${1-full}
 layout 2monitors 'IntelliJ IDEA':REPEAT              ${1-full}
-layout 2monitors 'Calendar':REPEAT                   ${2-full}
-layout 2monitors 'LimeChat':REPEAT                   ${2-full}
+layout 2monitors 'Calendar':REPEAT                   ${2-righttop}
+layout 2monitors 'LimeChat':REPEAT                   ${2-righttop}
+layout 2monitors 'Slack':REPEAT                      ${2-righttop}
 layout 2monitors 'Evernote':REPEAT                   ${1-full}
 
 # 1 Monitor layout
@@ -63,7 +67,8 @@ default 1monitor  count:1 #resolutions:${mon-internal}
  
 alias hyper ctrl;shift;alt;cmd
 
-bind e:${hyper}  ${showNormalHint}
+bind x:${hyper}   ${showNormalHint}
+bind f5:${hyper}  relaunch
 
 # Location bindings
 bind [:${hyper} ${lefthalf}
@@ -80,10 +85,10 @@ bind down:${hyper}     focus down
 
 # App bindings
 bind t:${hyper} focus 'iTerm'
-bind b:${hyper} focus 'Google Chrome'
+bind c:${hyper} focus 'Google Chrome'
 bind f:${hyper} focus 'Firefox'
 bind i:${hyper} focus 'IntelliJ IDEA'
-bind c:${hyper} focus 'Calendar'
-bind l:${hyper} focus 'LimeChat'
-bind s:${hyper} focus 'Safari'
-bind e:${hyper} focus 'Evernote'
+bind l:${hyper} focus 'Calendar'
+bind s:${hyper} focus 'Slack'
+bind e:${hyper} focus 'Emacs'
+bind m:${hyper} focus 'Messages'

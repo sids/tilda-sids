@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ec "$@" 2>/dev/null || emacs "$@"

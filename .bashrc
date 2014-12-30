@@ -62,7 +62,7 @@ function stt() {
 
 
 #### Paths ####
-export PATH=/usr/local/sbin:/usr/local/bin:$HOME/bin:$PATH:/usr/local/mysql/bin:$HOME/.go/bin:$HOME/src/fk/go/bin
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/go/bin:$HOME/src/fk/go/bin:/usr/local/opt/go/libexec/bin:$PATH
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 
 alias java_ls='/usr/libexec/java_home -V 2>&1 | grep -E "\d.\d.\d[,_]" | cut -d , -f 1 | colrm 1 4 | grep -v Home'
@@ -77,3 +77,7 @@ function java_use() {
 export EDITOR=vim
 export M2_HOME=  # Has become necessary to run maven, unsure why
 export GOPATH=$HOME/go:$HOME/src/fk/go
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/siddhartha/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=3

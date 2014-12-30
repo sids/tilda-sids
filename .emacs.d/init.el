@@ -132,7 +132,7 @@
 ;; Emacs Server
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;(server-start)
+(if window-system (server-start))
 
 
 
