@@ -142,8 +142,8 @@ set autowrite
 
 " Set list Chars - for showing characters that are not
 " normally displayed i.e. whitespace, tabs, EOL
-set listchars=
-set listchars+=trail:·
+"set listchars=
+"set listchars+=trail:·
 "set listchars+=tab:>-
 "set listchars+=eol:$
 "set list
