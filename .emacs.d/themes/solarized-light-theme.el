@@ -1,1 +1,0 @@
-../vendor/solarized/solarized-light-theme.el
