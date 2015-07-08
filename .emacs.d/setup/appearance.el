@@ -1,3 +1,4 @@
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Appearance
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -5,21 +6,20 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'cyberpunk t)
 
-(set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 120 :weight 'normal)
-(set-face-attribute 'default nil :family "Bitstream Vera Sans Mono" :height 120 :weight 'normal)
-(set-face-attribute 'default nil :family "Anonymous_Pro" :height 140 :weight 'normal)
-(set-face-attribute 'default nil :family "Droid Sans Mono" :height 120 :weight 'normal)
-(set-face-attribute 'default nil  :family "Inconsolata" :height 140 :weight 'normal)
+;;(set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 120 :weight 'normal)
+;;(set-face-attribute 'default nil :family "Bitstream Vera Sans Mono" :height 120 :weight 'normal)
+;;(set-face-attribute 'default nil :family "Inconsolata" :height 140 :weight 'normal)
+;;(set-face-attribute 'default nil :family "Anonymous_Pro" :height 140 :weight 'normal)
+;;(set-face-attribute 'default nil :family "Droid Sans Mono" :height 120 :weight 'normal)
+(set-face-attribute 'default nil :family "Source Code Pro" :height 130 :weight 'normal)
 
 ;; Hint: execute the following command and it'll print the current font settings
 ;; (insert "\n(set-default-font \"" (cdr (assoc 'font (frame-parameters))) "\")\n")
 
-(set-frame-font "-apple-Anonymous_Pro-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
-
 (set-background-color "#1a1a1e")
 
-(setq-default cursor-type 'bar)
-(set-cursor-color "Red")
+(setq-default cursor-type 'box)
+;;(set-cursor-color "Red")
 
 (show-paren-mode)
 (set-face-background 'show-paren-match-face (face-background 'default))
