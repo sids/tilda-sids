@@ -39,13 +39,11 @@ alias 2-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2
 alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${mon-external}
 
 # 2 Monitor layout
-layout 2monitors 'iTerm':REPEAT                      ${2-lefttop}
+layout 2monitors 'iTerm':REPEAT                      ${2-full}
 layout 2monitors 'Google Chrome':REPEAT              ${1-full}
 layout 2monitors 'Firefox':REPEAT                    ${1-full}
 layout 2monitors 'IntelliJ IDEA':REPEAT              ${1-full}
-layout 2monitors 'Calendar':REPEAT                   ${2-righttop}
-layout 2monitors 'LimeChat':REPEAT                   ${2-righttop}
-layout 2monitors 'Slack':REPEAT                      ${2-righttop}
+layout 2monitors 'Calendar':REPEAT                   ${2-full}
 layout 2monitors 'Evernote':REPEAT                   ${1-full}
 
 # 1 Monitor layout
@@ -54,7 +52,6 @@ layout 1monitor 'Google Chrome':REPEAT               ${1-full}
 layout 1monitor 'Firefox':REPEAT                     ${1-full}
 layout 1monitor 'IntelliJ IDEA':REPEAT               ${1-full}
 layout 1monitor 'Calendar':REPEAT                    ${1-full}
-layout 1monitor 'LimeChat':REPEAT                    ${1-full}
 layout 1monitor 'Evernote':REPEAT                    ${1-full}
 
 # Default Layouts
@@ -74,8 +71,8 @@ bind f5:${hyper}  relaunch
 bind [:${hyper} ${lefthalf}
 bind return:${hyper} ${full}
 bind ]:${hyper} ${righthalf}
-bind n:${hyper} throw next
-bind p:${hyper} throw previous
+bind ':${hyper} throw next
+#bind \:${hyper} throw previous
 
 # Focus Bindings
 bind right:${hyper}    focus right
@@ -84,14 +81,18 @@ bind up:${hyper}       focus up
 bind down:${hyper}     focus down
 
 # App bindings
-bind t:${hyper} focus 'iTerm'
-bind c:${hyper} focus 'Google Chrome'
-bind f:${hyper} focus 'Firefox'
-bind s:${hyper} focus 'Safari'
-bind i:${hyper} focus 'IntelliJ IDEA'
-bind l:${hyper} focus 'Calendar'
-bind k:${hyper} focus 'Slack'
-bind e:${hyper} focus 'Emacs'
-bind m:${hyper} focus 'Messages'
+
 bind o:${hyper} focus 'OmniFocus'
-bind b:${hyper} focus 'Mailbox (Beta)'
+bind n:${hyper} focus 'Notes'
+
+bind l:${hyper} focus 'Calendar'
+bind m:${hyper} focus 'Mailplane 3'
+
+bind t:${hyper} focus 'iTerm'
+bind i:${hyper} focus 'IntelliJ IDEA'
+bind e:${hyper} focus 'Emacs'
+
+bind c:${hyper} focus 'Google Chrome'
+bind w:${hyper} focus 'Tweetbot'
+
+bind u:${hyper} focus 'iTunes'
