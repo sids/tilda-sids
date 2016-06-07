@@ -27,9 +27,9 @@ function! Tabstyle_4Tabs()
   set shiftwidth=4
   set tabstop=4
 endfunction
-"call Tabstyle_4()
+call Tabstyle_4()
 "call Tabstyle_2()
-call Tabstyle_4Tabs()
+"call Tabstyle_4Tabs()
 
 
 " Indenting *******************************************************************
