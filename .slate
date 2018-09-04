@@ -10,8 +10,8 @@ config windowHintsSpread true
 #config windowHintsOrder persist
 
 # Monitor Aliases
-alias mon-internal      0
-alias mon-external      1
+alias mon-external      0
+alias mon-internal      1
 
 # Misc Aliases
 alias showHintsLeftHand hint ASDFGH
@@ -25,74 +25,148 @@ alias rightmost     move screenOriginX+screenSizeX*0.4;screenOriginY  screenSize
 alias rightless     move screenOriginX+screenSizeX*0.6;screenOriginY  screenSizeX*0.4;screenSizeY
 alias leftmost      move screenOriginX;screenOriginY                  screenSizeX*0.6;screenSizeY
 alias leftless      move screenOriginX;screenOriginY                  screenSizeX*0.4;screenSizeY
+
 # Concrete positions
-alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-internal}
-alias 1-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-internal}
-alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-internal}
-alias 2-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-external}
-alias 2-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-external}
-alias 2-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-external}
-alias 2-top         move screenOriginX;screenOriginY screenSizeX;screenSizeY/2       ${mon-external}
-alias 2-bottom      move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX;screenSizeY       ${mon-external}
-alias 2-lefttop     move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-external}
-alias 2-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-external}
-alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${mon-external}
+#
+alias 1-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-external}
+alias 1-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-external}
+alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-external}
+alias 1-eightyp_    move screenOriginX;screenOriginY screenSizeX/1.25;screenSizeY/1.25       ${mon-external}
+alias 1-eightyp     move screenOriginX+(screenSizeX/2-(screenSizeX*0.4));screenOriginY+(screenSizeY/2-(screenSizeY*0.4))  screenSizeX*0.8;screenSizeY*0.8       ${mon-external}
+alias 1-sixtyp      move screenOriginX+(screenSizeX/2-(screenSizeX*0.3));screenOriginY+(screenSizeY/2-(screenSizeY*0.3))  screenSizeX*0.6;screenSizeY*0.6       ${mon-external}
+alias 1-fiftyp      move screenOriginX+(screenSizeX/2-(screenSizeX*0.25));screenOriginY+(screenSizeY/2-(screenSizeY*0.25))  screenSizeX*0.5;screenSizeY*0.5       ${mon-external}
+alias 1-top         move screenOriginX;screenOriginY screenSizeX;screenSizeY/2       ${mon-external}
+alias 1-bottom      move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX;screenSizeY       ${mon-external}
+alias 1-lefttop     move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-external}
+alias 1-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-external}
+alias 1-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${mon-external}
+
+alias 2-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         ${mon-internal}
+alias 2-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         ${mon-internal}
+alias 2-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY         ${mon-internal}
+alias 2-top         move screenOriginX;screenOriginY screenSizeX;screenSizeY/2       ${mon-internal}
+alias 2-bottom      move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX;screenSizeY       ${mon-internal}
+alias 2-lefttop     move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-internal}
+alias 2-righttop    move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2       ${mon-internal}
+alias 2-rightbottom move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2       ${mon-internal}
+alias 2-eightyp     move screenOriginX+(screenSizeX/2-(screenSizeX*0.4));screenOriginY+(screenSizeY/2-(screenSizeY*0.4))  screenSizeX*0.8;screenSizeY*0.8       ${mon-internal}
+alias 2-sixtyp      move screenOriginX+(screenSizeX/2-(screenSizeX*0.3));screenOriginY+(screenSizeY/2-(screenSizeY*0.3))  screenSizeX*0.6;screenSizeY*0.6       ${mon-internal}
+alias 2-fiftyp      move screenOriginX+(screenSizeX/2-(screenSizeX*0.25));screenOriginY+(screenSizeY/2-(screenSizeY*0.25))  screenSizeX*0.5;screenSizeY*0.5       ${mon-internal}
 
 # 2 Monitor layout
-layout 2monitors 'iTerm':REPEAT                      ${2-full}
-layout 2monitors 'Google Chrome':REPEAT              ${1-full}
-layout 2monitors 'Firefox':REPEAT                    ${1-full}
-layout 2monitors 'IntelliJ IDEA':REPEAT              ${1-full}
+layout 2monitors 'iTerm2':REPEAT                     ${2-full}
+layout 2monitors 'Google Chrome':REPEAT              ${1-eightyp}
+layout 2monitors 'Firefox':REPEAT                    ${1-eightyp}
+layout 2monitors 'Safari':REPEAT                     ${1-eightyp}
+layout 2monitors 'IntelliJ IDEA':REPEAT              ${1-eightyp}
+layout 2monitors 'Android Studio':REPEAT             ${1-eightyp}
 layout 2monitors 'Calendar':REPEAT                   ${2-full}
-layout 2monitors 'Evernote':REPEAT                   ${1-full}
+layout 2monitors 'Spark':REPEAT                      ${1-fiftyp}
+layout 2monitors 'Notes':REPEAT                      ${1-fiftyp}
+layout 2monitors 'iTunes':REPEAT                     ${1-fiftyp}
+layout 2monitors 'OmniFocus':REPEAT                  ${2-full}
+layout 2monitors 'Bear':REPEAT                       ${2-eightyp}
+layout 2monitors 'Things':REPEAT                     ${2-sixtyp}
 
 # 1 Monitor layout
-layout 1monitor 'iTerm':REPEAT                       ${1-full}
+layout 1monitor 'iTerm2':REPEAT                      ${1-full}
 layout 1monitor 'Google Chrome':REPEAT               ${1-full}
 layout 1monitor 'Firefox':REPEAT                     ${1-full}
 layout 1monitor 'IntelliJ IDEA':REPEAT               ${1-full}
+layout 1monitor 'Android Studio':REPEAT              ${1-full}
 layout 1monitor 'Calendar':REPEAT                    ${1-full}
 layout 1monitor 'Evernote':REPEAT                    ${1-full}
+layout 1monitor 'Bear':REPEAT                       ${1-eightyp}
+layout 1monitor 'Things':REPEAT                     ${1-sixtyp}
 
 # Default Layouts
-default 2monitors count:2 #resolutions:${mon-internal};${mon-external};
-default 1monitor  count:1 #resolutions:${mon-internal}
+default 2monitors count:2 #resolutions:${mon-external};${mon-internal};
+default 1monitor  count:1 #resolutions:${mon-external}
+
+# ======================================
+# Keybindings
+# ======================================
+
+bind x:f19   ${showNormalHint}
+bind f5:f19  relaunch
+
+# Location bindings
+bind [:f19 ${lefthalf}
+bind return:f19 ${full}
+bind ]:f19 ${righthalf}
+bind =:f19 move screenOriginX+((screenSizeX-windowSizeX)/2);screenOriginY+((screenSizeY-windowSizeY)/2) windowSizeX;windowSizeY
+bind ':f19 throw next
+#bind \:f19 throw previous
+bind 8:f19 ${1-eightyp}
+bind 6:f19 ${1-sixtyp}
+bind 5:f19 ${1-fiftyp}
+
+# Focus Bindings
+bind right:f19    focus right
+bind left:f19     focus left
+bind up:f19       focus up
+bind down:f19     focus down
+
+# App bindings
+
+bind g:f19 focus 'Things'
+bind b:f19 focus 'Bear'
+bind o:f19 focus 'OmniFocus'
+bind n:f19 focus 'Notes'
+
+bind l:f19 focus 'Slack'
+bind k:f19 focus 'Spark'
+bind w:f19 focus 'WhatsApp'
+
+bind t:f19 focus 'iTerm2'
+bind i:f19 focus 'IntelliJ IDEA'
+bind v:f19 focus 'MacVim'
+bind e:f19 focus 'Emacs'
+bind p:f19 focus 'Postman'
+
+bind c:f19 focus 'Google Chrome'
+bind s:f19 focus 'Safari'
+bind w:f19 focus 'Tweetbot'
+bind f:f19 focus 'Firefox'
+
+bind u:f19 focus 'iTunes'
 
 # ======================================
 # The HYPER key
 # ======================================
- 
-alias hyper ctrl;shift;alt;cmd
-
-bind x:${hyper}   ${showNormalHint}
-bind f5:${hyper}  relaunch
-
-# Location bindings
-bind [:${hyper} ${lefthalf}
-bind return:${hyper} ${full}
-bind ]:${hyper} ${righthalf}
-bind ':${hyper} throw next
-#bind \:${hyper} throw previous
-
-# Focus Bindings
-bind right:${hyper}    focus right
-bind left:${hyper}     focus left
-bind up:${hyper}       focus up
-bind down:${hyper}     focus down
-
-# App bindings
-
-bind o:${hyper} focus 'OmniFocus'
-bind n:${hyper} focus 'Notes'
-
-bind l:${hyper} focus 'Calendar'
-bind m:${hyper} focus 'Mailplane 3'
-
-bind t:${hyper} focus 'iTerm'
-bind i:${hyper} focus 'IntelliJ IDEA'
-bind e:${hyper} focus 'Emacs'
-
-bind c:${hyper} focus 'Google Chrome'
-bind w:${hyper} focus 'Tweetbot'
-
-bind u:${hyper} focus 'iTunes'
+# 
+#alias hyper ctrl;shift;alt;cmd
+#
+#bind x:${hyper}   ${showNormalHint}
+#bind f5:${hyper}  relaunch
+#
+## Location bindings
+#bind [:${hyper} ${lefthalf}
+#bind return:${hyper} ${full}
+#bind ]:${hyper} ${righthalf}
+#bind ':${hyper} throw next
+##bind \:${hyper} throw previous
+#
+## Focus Bindings
+#bind right:${hyper}    focus right
+#bind left:${hyper}     focus left
+#bind up:${hyper}       focus up
+#bind down:${hyper}     focus down
+#
+## App bindings
+#
+#bind o:${hyper} focus 'OmniFocus'
+#bind n:${hyper} focus 'Notes'
+#
+#bind l:${hyper} focus 'Calendar'
+#bind m:${hyper} focus 'Mailplane 3'
+#
+#bind t:${hyper} focus 'iTerm2'
+#bind i:${hyper} focus 'IntelliJ IDEA'
+#bind i:${hyper} focus 'Android Studio'
+#bind e:${hyper} focus 'Emacs'
+#
+#bind c:${hyper} focus 'Google Chrome'
+#bind w:${hyper} focus 'Tweetbot'
+#
+#bind u:${hyper} focus 'iTunes'
